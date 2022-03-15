@@ -1,5 +1,5 @@
 # Projeto Finanças 
-Comando para criação da base, e cadastro do usuario (user:admin senha:12345).
+##### Comandos para criação da base, e cadastro do usuario (user:admin senha:12345).
 1 -- Criando estrutura do banco de dados para fin:<br />
  CREATE DATABASE IF NOT EXISTS `fin`;
  USE `fin`;
