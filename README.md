@@ -14,8 +14,7 @@
   `natureza` varchar(50) DEFAULT NULL,<br />
   `descricao` varchar(50) DEFAULT NULL,<br />
   `data_reg` datetime DEFAULT NULL,<br />
-  PRIMARY KEY (`id`),<br />
-  KEY `id` (`id`)<br />
+  PRIMARY KEY (`id`),KEY `id` (`id`)<br />
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4;
 
 ##### # 3 - Criando estrutura para tabela usuarios:<br />
@@ -23,8 +22,7 @@
   `id` int(11) NOT NULL AUTO_INCREMENT,<br />
   `user` varchar(50) DEFAULT NULL,<br />
   `senha` varchar(50) DEFAULT NULL,<br />
-  PRIMARY KEY (`id`),<br />
-  KEY `id` (`id`)<br />
+  PRIMARY KEY (`id`),KEY `id` (`id`)<br />
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
 ##### # 4 - Copiando dados para a tabela usuarios:<br />
