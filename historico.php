@@ -34,20 +34,22 @@
 	<?php
 		include_once("conexao.php");
 		include_once("verifica_login.php");
-		$sql = mysqli_query($conexao, "SELECT * FROM controle where user ='".$_SESSION['id']."' order by data desc"); 
+		$sql = mysqli_query($conexao, "SELECT * FROM controle where user ='".$_SESSION['id']."' order by data_reg desc"); 
 		$sum_d = mysqli_query($conexao, "SELECT sum(valor) FROM controle where tipo ='Despesa'and user ='".$_SESSION['id']."'"); 
 		$sum_r = mysqli_query($conexao, "SELECT sum(valor) FROM controle where tipo ='Renda' and user ='".$_SESSION['id']."'"); 
 		$soma_d = mysqli_fetch_assoc($sum_d);
 		$soma_r = mysqli_fetch_assoc($sum_r);
 		$registros = mysqli_num_rows($sql);
+		
 
 		mysqli_close($conexao);
 		echo "<ul class='collection-header'><h4 style='text-align: center;'>".$registros. " Registro(s) Encontrado(s) para ".$_SESSION['usuario']."</h4></ul>";
-		echo "<ul class='collection-header'><h4 style='text-align: center;'>Total de Renda: ".$soma_r['sum(valor)']."</h4></ul>"; 
+		echo "<ul class='collection-header'><h4 style='text-align: center;'>Total de Renda bruta: ".$soma_r['sum(valor)']."</h4></ul>"; 
 		echo "<ul class='collection-header'><h4 style='text-align: center;'>Total de Despesas: ".$soma_d['sum(valor)']."</h4></ul>"; 
+		echo "<ul class='collection-header'><h4 style='text-align: center;'>Total de renda liquida: ".$soma_r['sum(valor)']-$soma_d['sum(valor)']."</h4></ul>"; 
 		echo "<br>";
-		echo "<table class='centered'>	
-							  	";
+		echo "<table class='centered'>";
+
 		while($aux = mysqli_fetch_assoc($sql)) { 	
 			// echo "<ul class='collection with-header z-depth-5'>
    //     						<li class='collection-header'><h4 <h4 style='text-align: center;'>".$aux["titulo"]."</h4><a style='margin-left: 91%' href=deleta.php?id=".$aux['id'].">Deletar</a><a style='margin-left: 2%' href=edita.php?id=".$aux['id'].">Editar</a></li>
@@ -62,7 +64,7 @@
 	  				<div class='card-body'>
 	  					<h5 class='card-title'>".$aux["titulo"]."</h5>
 	  					<ul class='list-group list-group-flush'>
-    						<li class='list-group-item'>Descrição : ".$aux["desc"]."</li>
+    						<li class='list-group-item'>Descrição : ".$aux["descricao"]."</li>
 						    <li class='list-group-item'>Natureza : ".$aux["natureza"]."</li>
     						<li class='list-group-item'>Tipo : ".$aux["tipo"]."</li>
     						<li class='list-group-item'>Valor : ".$aux["valor"]."</li>
@@ -70,7 +72,7 @@
 	    				<a href='deleta.php?id=".$aux['id']."' class='btn btn-primary'>Deletar</a>
 	  				</div>
 	  				<div class='card-footer text-muted'>
-	    				Criado em: ".$aux["data"]."
+	    				Criado em: ".$aux["data_reg"]."
 	  				</div>
 				</div>
 				<br>";

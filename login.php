@@ -16,7 +16,7 @@ body, html {
 }
 
 .bg {
-  background-image: url('https://images2.alphacoders.com/542/thumb-1920-542730.png');
+  background-image: url('img/walpaper_login.jpg');
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;

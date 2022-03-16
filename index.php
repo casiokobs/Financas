@@ -61,9 +61,9 @@
 				</div>
 			</div>
 						
-			<div class="form-group" id="natureza" style="display: none;">
+			<div class="form-group" id="div_natureza" style="display: none;">
 			    <label for="exampleFormControlSelect1">Natureza</label>
-			    <select class="form-control" id="tiponatureza" name="tiponatureza">
+			    <select class="form-control" id="natureza" name="natureza">
 			      <option selected disabled="" value="0">Escolha uma opção</option>
 			      <option value="Trasnporte">Trasnporte</option>
 			      <option value="Alimentação">Alimentação</option>
@@ -108,13 +108,13 @@
 <script type="text/javascript">
 	$('#despesa').change(()=>{
 		$('#renda').attr("required", "req");
-		$('#natureza').removeAttr('style');
-		$('#tiponatureza').attr("required", "req");
+		$('#div_natureza').removeAttr('style');
+		$('#natureza').attr("required", "req");
     });
     $('#renda').change(()=>{
     	$('#despesa').attr("required", "req");
-		$('#natureza').css({'display': 'none'});
-		$('#tiponatureza').removeAttr('required');
+		$('#div_natureza').css({'display': 'none'});
+		$('#natureza').removeAttr('required');
     });
 
 	$("#valor").maskMoney({
