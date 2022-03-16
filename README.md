@@ -12,8 +12,8 @@
   `tipo` varchar(50) DEFAULT NULL,
   `valor` double DEFAULT NULL,
   `natureza` varchar(50) DEFAULT NULL,
-  `desc` varchar(50) DEFAULT NULL,
-  `data` datetime DEFAULT NULL,
+  `descricao` varchar(50) DEFAULT NULL,
+  `data_reg` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `id` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4;
