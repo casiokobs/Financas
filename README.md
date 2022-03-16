@@ -5,26 +5,26 @@
  USE `fin`;
 
 ##### # 2 - Criando estrutura para tabela fin.controle:<br />
- CREATE TABLE IF NOT EXISTS `controle` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user` int(11) DEFAULT 0,
-  `titulo` varchar(50) DEFAULT NULL,
-  `tipo` varchar(50) DEFAULT NULL,
-  `valor` double DEFAULT NULL,
-  `natureza` varchar(50) DEFAULT NULL,
-  `descricao` varchar(50) DEFAULT NULL,
-  `data_reg` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `id` (`id`)
+ CREATE TABLE IF NOT EXISTS `controle` (<br />
+  `id` int(11) NOT NULL AUTO_INCREMENT,<br />
+  `user` int(11) DEFAULT 0,<br />
+  `titulo` varchar(50) DEFAULT NULL,<br />
+  `tipo` varchar(50) DEFAULT NULL,<br />
+  `valor` double DEFAULT NULL,<br />
+  `natureza` varchar(50) DEFAULT NULL,<br />
+  `descricao` varchar(50) DEFAULT NULL,<br />
+  `data_reg` datetime DEFAULT NULL,<br />
+  PRIMARY KEY (`id`),<br />
+  KEY `id` (`id`)<br />
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4;
 
 ##### # 3 - Criando estrutura para tabela usuarios:<br />
- CREATE TABLE IF NOT EXISTS `usuarios` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user` varchar(50) DEFAULT NULL,
-  `senha` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `id` (`id`)
+ CREATE TABLE IF NOT EXISTS `usuarios` (<br />
+  `id` int(11) NOT NULL AUTO_INCREMENT,<br />
+  `user` varchar(50) DEFAULT NULL,<br />
+  `senha` varchar(50) DEFAULT NULL,<br />
+  PRIMARY KEY (`id`),<br />
+  KEY `id` (`id`)<br />
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
 ##### # 4 - Copiando dados para a tabela usuarios:<br />
