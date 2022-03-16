@@ -25,6 +25,6 @@
   PRIMARY KEY (`id`),KEY `id` (`id`)<br />
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
-##### # 4 - Copiando dados para a tabela usuarios:<br />
+##### # 4 - Cadastrando dados para a tabela usuarios:<br />
  INSERT INTO `usuarios` (`id`, `user`, `senha`) VALUES
 	(1, 'admin', '827ccb0eea8a706c4c34a16891f84e7b');
