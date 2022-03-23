@@ -65,7 +65,7 @@
 			    <label for="exampleFormControlSelect1">Natureza</label>
 			    <select class="form-control" id="natureza" name="natureza">
 			      <option selected disabled="" value="0">Escolha uma opção</option>
-			      <option value="Trasnporte">Trasnporte</option>
+			      <option value="Trasnporte">Transporte</option>
 			      <option value="Alimentação">Alimentação</option>
 			      <option value="Lazer">Lazer</option>
 			    </select>
